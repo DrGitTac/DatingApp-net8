@@ -7,7 +7,9 @@ import { HomeComponent } from "./home/home.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavComponent, HomeComponent], 
+  imports: [RouterOutlet, NavComponent, 
+    //HomeComponent //keeps giving yellow squiggle :(
+  ], 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
