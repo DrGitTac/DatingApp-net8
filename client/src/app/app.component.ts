@@ -8,7 +8,9 @@ import { NgxSpinnerComponent } from 'ngx-spinner';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavComponent, NgxSpinnerComponent, HomeComponent  ],  //keeps giving yellow squiggle :(
+  imports: [RouterOutlet, NavComponent, NgxSpinnerComponent, 
+   // HomeComponent  
+  ],  //Home keeps giving yellow squiggle :(
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

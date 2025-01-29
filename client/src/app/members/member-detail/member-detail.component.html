@@ -49,9 +49,13 @@
                     @if (photoTab.active) {
                         <gallery 
                         [items]="images" 
+                        [itemAutosize]="true"
                         class="gallery"
                         counter="true"
-                        counterPosition="bottom"                    
+                        counterPosition="bottom"   
+                        thumbnails="true"
+                        thumbnailsRows="1"
+                        thumbnailsPercent="50"                 
                         ></gallery>
                     }
                     
