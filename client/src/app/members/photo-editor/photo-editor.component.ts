@@ -4,7 +4,7 @@ import { DecimalPipe, NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
 import { FileUploader, FileUploadModule } from 'ng2-file-upload';
 import { AccountService } from '../../_services/accounts.service';
 import { environment } from '../../../environments/environment';
-import { Photo } from '../../_models/photo';
+import { Photos } from '../../_models/photos';
 import { MembersService } from '../../_services/members.service';
 
 @Component({
@@ -31,7 +31,7 @@ export class PhotoEditorComponent implements OnInit {
     this.hasBaseDropZoneOver = e;
   }
 
-  deletePhoto(photo: Photo) {
+  deletePhoto(photo: Photos) {
     this.memberService.deletePhoto(photo).subscribe({
       next: _ => {
         const updatedMember = {...this.member()};
@@ -41,7 +41,7 @@ export class PhotoEditorComponent implements OnInit {
     })
   }
 
-  setMainPhoto(photo: Photo) {
+  setMainPhoto(photo: Photos) {
     this.memberService.setMainPhoto(photo).subscribe({
       next: _ => {
         const user = this.accountService.currentUser();
